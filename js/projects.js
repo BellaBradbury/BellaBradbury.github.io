@@ -131,7 +131,6 @@ function createModal(card, itm, type) {
     modalCot.append(techCot);
 
     if (type === 'keyup') {
-        console.log('CARD', card);
         card.after(modalCot);
     } else if (type === 'click') {
         foliosSect.append(modalCot);
@@ -163,10 +162,7 @@ function modalEvent(e) {
 };
 
 // ---------- EVENTS ---------- //
-foliosCot.addEventListener('click', (e)=> {
-    console.log(e);
-    modalEvent(e);
-});
+foliosCot.addEventListener('click', modalEvent);
 foliosCot.addEventListener('keyup', (e)=> {
     if (e.key === 'Tab' || e.key === 'Enter') {
         modalEvent(e);
@@ -175,8 +171,6 @@ foliosCot.addEventListener('keyup', (e)=> {
 
 window.addEventListener('click', closeEventClick);
 window.addEventListener('keyup', (e)=> {
-    console.log(e);
-
     if (e.key === 'Tab' || e.key === 'Enter') {
         closeEventKey(e);
     }
