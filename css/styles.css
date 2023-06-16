@@ -307,4 +307,39 @@ template {
   display: none;
 }
 
+* {
+  margin: 0 !important;
+}
+
+body {
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+body header {
+  padding: 5% 10%;
+}
+body main {
+  padding: 5% 10%;
+}
+body footer {
+  padding: 5% 10%;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+header {
+  background-color: pink;
+}
+
+main {
+  background-color: purple;
+}
+
+footer {
+  background-color: blue;
+}
+
 /*# sourceMappingURL=styles.css.map */

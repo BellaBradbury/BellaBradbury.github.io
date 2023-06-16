@@ -1,1 +1,17 @@
 // ---------- GRID STYLES ---------- //
+body {
+    min-height: 100vh;
+    overscroll-behavior: none;
+
+    header {
+        padding: $pad-sect;
+    }
+
+    main {
+        padding: $pad-sect;
+    }
+
+    footer {
+        padding: $pad-sect;
+    }
+}
