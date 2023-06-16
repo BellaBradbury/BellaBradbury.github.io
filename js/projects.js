@@ -4,11 +4,11 @@ const foliosCot = document.getElementById('js-cot-folios');
 
 const projects = [
     {
-        "project_name": "Profile Page",
-        "description": "A customized web page to serve as a personal profile site.",
-        "technologies": ["HTML", "CSS"],
-        "live_link": "https://bellabradbury.github.io/Create-A-Profile-Page-WD-1/",
-        "github_link": "https://github.com/BellaBradbury/Create-A-Profile-Page-WD-1.git",
+        "project_name": "Registration Form",
+        "description": "Interactive form to register for a fictional coding conference.",
+        "technologies": ["JavaScript"],
+        "live_link": "https://bellabradbury.github.io/Interactive-Registration-Form/",
+        "github_link": "https://github.com/BellaBradbury/Interactive-Registration-Form",
         "image_urls": {
             "thumbnail": {
                 "src": "../imgs/temp-img.png",
@@ -29,11 +29,11 @@ const projects = [
         },
     },
     {
-        "project_name": "Responsive Layout",
-        "description": "A responsive, mobile-first layout that also accommodates medium and large screens.",
-        "technologies": ["HTML", "CSS"],
-        "live_link": "https://bellabradbury.github.io/Mobile-First-Responsive-Layout-WD-2/",
-        "github_link": "https://github.com/BellaBradbury/Mobile-First-Responsive-Layout-WD-2.git",
+        "project_name": "Phrase Hunter",
+        "description": "Online game reminiscent of 'Wheel of Fortune' phrase puzzle.",
+        "technologies": ["JavaScript", "CSS", "HTML"],
+        "live_link": "https://bellabradbury.github.io/OOP-Word-Guessing-Game/",
+        "github_link": "https://github.com/BellaBradbury/OOP-Word-Guessing-Game",
         "image_urls": {
             "thumbnail": {
                 "src": "../imgs/temp-img.png",
@@ -50,9 +50,134 @@ const projects = [
             "modal_lg": {
                 "src": "../imgs/temp-img.png",
                 "alt": "lg alt text"
-            }       
+            }
         },
-    }
+    },
+    {
+        "project_name": "Dashboard",
+        "description": "Mock dashboard displaying user interactions and charted data.",
+        "technologies": ["JavaScript", "SASS", "HTML"],
+        "live_link": "https://bellabradbury.github.io/web-app-dashboard/",
+        "github_link": "https://github.com/BellaBradbury/web-app-dashboard",
+        "image_urls": {
+            "thumbnail": {
+                "src": "../imgs/temp-img.png",
+                "alt": "thumbnail alt text"
+            },
+            "modal_sm": {
+                "src": "../imgs/temp-img.png",
+                "alt": "sm alt text"
+            },
+            "modal_md": {
+                "src": "../imgs/temp-img.png",
+                "alt": "md alt text"
+            },
+            "modal_lg": {
+                "src": "../imgs/temp-img.png",
+                "alt": "lg alt text"
+            }
+        },
+    },
+    {
+        "project_name": "Quote Generator",
+        "description": "Random quotes and background colors displayed via user click and automatic refresh.",
+        "technologies": ["JavaScript"],
+        "live_link": "https://bellabradbury.github.io/Random-Quote-Generator/",
+        "github_link": "https://github.com/BellaBradbury/Random-Quote-Generator",
+        "image_urls": {
+            "thumbnail": {
+                "src": "../imgs/temp-img.png",
+                "alt": "thumbnail alt text"
+            },
+            "modal_sm": {
+                "src": "../imgs/temp-img.png",
+                "alt": "sm alt text"
+            },
+            "modal_md": {
+                "src": "../imgs/temp-img.png",
+                "alt": "md alt text"
+            },
+            "modal_lg": {
+                "src": "../imgs/temp-img.png",
+                "alt": "lg alt text"
+            }
+        },
+    },
+    {
+        "project_name": "Student Database",
+        "description": "Database showcasing pagination and filtering of fictional students.",
+        "technologies": ["JavaScript"],
+        "live_link": "https://bellabradbury.github.io/Student-Database/",
+        "github_link": "https://github.com/BellaBradbury/Student-Database",
+        "image_urls": {
+            "thumbnail": {
+                "src": "../imgs/temp-img.png",
+                "alt": "thumbnail alt text"
+            },
+            "modal_sm": {
+                "src": "../imgs/temp-img.png",
+                "alt": "sm alt text"
+            },
+            "modal_md": {
+                "src": "../imgs/temp-img.png",
+                "alt": "md alt text"
+            },
+            "modal_lg": {
+                "src": "../imgs/temp-img.png",
+                "alt": "lg alt text"
+            }
+        },
+    },
+    {
+        "project_name": "Style Guide",
+        "description": "Page showcasing responsive SASS styling.",
+        "technologies": ["HTML", "SASS"],
+        "live_link": "https://bellabradbury.github.io/web-style-guide/",
+        "github_link": "https://github.com/BellaBradbury/web-style-guide",
+        "image_urls": {
+            "thumbnail": {
+                "src": "../imgs/temp-img.png",
+                "alt": "thumbnail alt text"
+            },
+            "modal_sm": {
+                "src": "../imgs/temp-img.png",
+                "alt": "sm alt text"
+            },
+            "modal_md": {
+                "src": "../imgs/temp-img.png",
+                "alt": "md alt text"
+            },
+            "modal_lg": {
+                "src": "../imgs/temp-img.png",
+                "alt": "lg alt text"
+            }
+        },
+    },
+    {
+        "project_name": "Photo Gallery",
+        "description": "Site displaying photos with modal and search functionality.",
+        "technologies": ["JavaScript", "HTML", "SASS"],
+        "live_link": "https://bellabradbury.github.io/interactive-photo-gallery/",
+        "github_link": "https://github.com/BellaBradbury/interactive-photo-gallery",
+        "image_urls": {
+            "thumbnail": {
+                "src": "../imgs/temp-img.png",
+                "alt": "thumbnail alt text"
+            },
+            "modal_sm": {
+                "src": "../imgs/temp-img.png",
+                "alt": "sm alt text"
+            },
+            "modal_md": {
+                "src": "../imgs/temp-img.png",
+                "alt": "md alt text"
+            },
+            "modal_lg": {
+                "src": "../imgs/temp-img.png",
+                "alt": "lg alt text"
+            }
+        },
+    },
 ]; 
 
 // ---------- CREATE & PRINT PROJECTS FROM ARRAY ---------- //
