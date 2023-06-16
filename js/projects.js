@@ -236,8 +236,8 @@ function createModal(card, itm, type) {
             <img src="${itm.image_urls.modal_lg.src}" class="img-thumbnail" alt="${itm.image_urls.modal_lg.alt}">
         </div>
         <div id="folio-links">
-            <a href="${itm.live_link}">LIVE</a>
-            <a href="${itm.github_link}">REPO</a>
+            <a href="${itm.live_link} target="_blank">LIVE</a>
+            <a href="${itm.github_link}" target="_blank">REPO</a>
         </div>
         <p>${itm.description}</p>
     `;
