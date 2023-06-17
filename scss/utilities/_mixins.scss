@@ -1,1 +1,11 @@
 // ---------- LAYOUT ---------- //
+@mixin flex($d:column, $j:space-evenly, $a:center) {
+    display: flex;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+
+    @if ($j == 'space-evenly' or $j == 'space-between') {
+        width: -webkit-fill-available;
+    }
+}

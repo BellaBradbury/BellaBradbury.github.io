@@ -24,3 +24,9 @@ Team Treehouse - Front End Web Development Techdegree - Project 9
 * Student Database
 * Web Style Guide
 * Interactive Photo Gallery
+
+-OPEN TAGS-
+* body layout
+
+-TO DO-
+* main layout

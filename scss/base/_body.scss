@@ -1,10 +1,40 @@
-// ---------- BODY STYLES ---------- //
+// ---------- BODY LAYOUT ---------- //
 body {
     min-height: 100vh;
     overscroll-behavior: none;
 
     header {
         padding: $pad-sect;
+
+        @include flex;
+
+        img {
+            margin: auto;
+        }
+
+        #nav-top {
+            @include flex;
+
+             ul {
+                @include flex($d:row, $j:space-between);
+
+                width: 70%;
+
+                li {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            .nav-one {
+                align-self: start;
+                margin: 10% 0 -1% 0;
+            }
+            .nav-two {
+                align-self: end;
+                margin: -1% 0 5% 0;
+            }
+        }
     }
 
     main {
@@ -13,5 +43,17 @@ body {
 
     footer {
         padding: $pad-sect;
+        text-align: center;
+
+        #nav-btm {
+            @include flex($d:row, $j:space-between);
+
+            &-sm {
+                // HIDE AT MD SCREEN
+            }
+            &-md {
+                display: none;
+            }
+        }
     }
 }
