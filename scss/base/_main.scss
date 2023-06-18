@@ -97,9 +97,14 @@ main {
             border: $border-thin;
             border-radius: $folio-brdrad-sm;
             margin: 5% 0;
+            padding: 0;
 
             @include mq(md) {
                 width: $folio-width-md;
+            }
+
+            @include mq(lg) {
+                width: $folio-width-lg;
             }
 
             img {
@@ -122,6 +127,14 @@ main {
             &:hover > h3 {
                 opacity: 100;
                 background: rgba($color-lightest, .5);
+            }
+
+            &:focus > h3{
+                opacity: 100;
+                background: rgba($color-lightest, .5);
+            }
+            &:focus {
+                border: $border-focus;
             }
         }
     }

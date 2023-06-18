@@ -126,14 +126,13 @@ const projects = [
 
 // ---------- CREATE & PRINT PROJECTS FROM ARRAY ---------- //
 projects.forEach(project => {
-    const btn = document.createElement('btn');
+    const btn = document.createElement('button');
     const cardData = `
         <img src="${project.image_urls.thumbnail.src}" class="img-thumbnail" alt="${project.image_urls.thumbnail.alt}">
         <h3>${project.project_name}</h3>
     `;
     btn.innerHTML = cardData;
     btn.classList.add('folios-card');
-    btn.tabIndex = '0';
 
     foliosCot.appendChild(btn);
 });
@@ -152,9 +151,8 @@ function closeEventKey(e) {
     const modalCot = document.getElementById('js-cot-folio_detail');
 
     if (modalCot) {
-        console.log('EVENT TARGET', e.target);
         const isFolio = (e.target.parentElement.id === 'folios-cot');
-        const isModal = (e.target.parentElement.id === 'folio-links');
+        const isModal = ( e.target.parentElement.classList.contains('folios-links') );
     
         if (!isFolio && !isModal) {
             modalCot.remove();
@@ -210,6 +208,7 @@ function createModal(card, itm, type) {
 
     if (type === 'keyup') {
         card.after(modalCot);
+        modalCot.scrollIntoView({behavior: "smooth"});
     } else if (type === 'click') {
         foliosSect.append(modalCot);
         modalCot.scrollIntoView({behavior: "smooth"});

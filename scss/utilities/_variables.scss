@@ -1,9 +1,12 @@
 // ---------- COLORS ---------- //
+$color-focus: red;
+
 $color-lightest: white;
 $color-darkest: black;
 
 // ---------- BORDERS ---------- //
 $border-thin: 1px solid $color-darkest;
+$border-focus: 3px solid $color-focus;
 
 // ---------- LAYOUT ---------- //
 $pad-sect: 5% 10%;
@@ -12,6 +15,7 @@ $pad-sect: 5% 10%;
 $folio-height: 50px;
 $folio-width-sm: 100%;
 $folio-width-md: 45%;
+$folio-width-lg: 26%;
 $folio-brdrad-sm: 25px 50px;
 
 // ---------- BREAKPOINTS ---------- //
