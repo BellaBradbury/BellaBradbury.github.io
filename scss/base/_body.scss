@@ -8,31 +8,63 @@ body {
 
         @include flex;
 
+        @include mq(md) {
+            flex-direction: row;
+        }
+
         img {
             margin: auto;
+
+            @include mq(md) {
+                height: 75px;
+                width: 75px;
+            }
         }
 
         #nav-top {
             @include flex;
 
-             ul {
+            @include mq(md) {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            ul {
                 @include flex($d:row, $j:space-between);
 
                 width: 70%;
 
+                @include mq('md') {
+                    width: 35%;
+                }
+
                 li {
                     width: 25px;
                     height: 25px;
+
+                    @include mq(md) {
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 10%;
+                    }
                 }
             }
 
             .nav-one {
                 align-self: start;
                 margin: 10% 0 -1% 0;
+
+                @include mq(md) {
+                    margin: 0;
+                }
             }
             .nav-two {
                 align-self: end;
                 margin: -1% 0 5% 0;
+
+                @include mq(md) {
+                    margin: 0;
+                }
             }
         }
     }
@@ -48,10 +80,17 @@ body {
             @include flex($d:row, $j:space-between);
 
             &-sm {
-                // HIDE AT MD SCREEN
+                @include mq(md) {
+                    display: none;
+                }
             }
             &-md {
                 display: none;
+
+                @include mq(md) {
+                    @include flex($d:row);
+                    width: 50%;
+                }
             }
         }
 
