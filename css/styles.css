@@ -319,8 +319,19 @@ body header {
   align-items: center;
   width: -webkit-fill-available;
 }
+@media (min-width: 768px) {
+  body header {
+    flex-direction: row;
+  }
+}
 body header img {
   margin: auto;
+}
+@media (min-width: 768px) {
+  body header img {
+    height: 75px;
+    width: 75px;
+  }
 }
 body header #nav-top {
   display: flex;
@@ -328,6 +339,12 @@ body header #nav-top {
   justify-content: space-evenly;
   align-items: center;
   width: -webkit-fill-available;
+}
+@media (min-width: 768px) {
+  body header #nav-top {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
 body header #nav-top ul {
   display: flex;
@@ -337,24 +354,45 @@ body header #nav-top ul {
   width: -webkit-fill-available;
   width: 70%;
 }
+@media (min-width: 768px) {
+  body header #nav-top ul {
+    width: 35%;
+  }
+}
 body header #nav-top ul li {
   width: 25px;
   height: 25px;
+}
+@media (min-width: 768px) {
+  body header #nav-top ul li {
+    width: 50px;
+    height: 50px;
+    margin: 0 10%;
+  }
 }
 body header #nav-top .nav-one {
   align-self: start;
   margin: 10% 0 -1% 0;
 }
+@media (min-width: 768px) {
+  body header #nav-top .nav-one {
+    margin: 0;
+  }
+}
 body header #nav-top .nav-two {
   align-self: end;
   margin: -1% 0 5% 0;
+}
+@media (min-width: 768px) {
+  body header #nav-top .nav-two {
+    margin: 0;
+  }
 }
 body main {
   padding: 5% 10%;
 }
 body footer {
   padding: 5% 10%;
-  text-align: center;
 }
 body footer #nav-btm {
   display: flex;
@@ -366,7 +404,20 @@ body footer #nav-btm {
 body footer #nav-btm-md {
   display: none;
 }
+body footer p {
+  text-align: center;
+}
 
+main section {
+  margin: 5% 0;
+  border-bottom: 1px solid black;
+}
+main section:last-of-type {
+  border: none;
+}
+main #welcome p {
+  text-align: left;
+}
 main .about-jobs p {
   text-align: left;
 }
@@ -377,23 +428,49 @@ main .about-jobs li {
   align-items: center;
   width: -webkit-fill-available;
 }
+@media (min-width: 768px) {
+  main .about-jobs li {
+    flex-direction: row;
+  }
+}
 main .about-tech {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: -webkit-fill-available;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+main .about-tech img {
+  width: 26%;
+  height: auto;
+}
+@media (min-width: 1024px) {
+  main .about-tech img {
+    width: 21%;
+  }
+}
+main .about-tech img:nth-child(3n+2) {
+  margin-top: 20%;
+}
+@media (min-width: 1024px) {
+  main .about-tech img:nth-child(3n+2) {
+    margin-top: 0;
+  }
+}
+main #folios-cot {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: -webkit-fill-available;
-  margin-top: 7%;
+  flex-wrap: wrap;
 }
-main .about-tech img {
-  margin-top: -2%;
-}
-main .about-tech div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: -webkit-fill-available;
+@media (min-width: 768px) {
+  main #folios-cot {
+    flex-direction: row;
+  }
 }
 main .folios-card {
   display: flex;
@@ -405,6 +482,11 @@ main .folios-card {
   border: 1px solid black;
   border-radius: 25px 50px;
   margin: 5% 0;
+}
+@media (min-width: 768px) {
+  main .folios-card {
+    width: 45%;
+  }
 }
 main .folios-card img {
   width: 100%;

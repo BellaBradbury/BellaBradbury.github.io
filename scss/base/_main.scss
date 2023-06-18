@@ -1,5 +1,14 @@
 // ---------- MAIN LAYOUT ---------- //
 main {
+    section {
+        margin: 5% 0;
+        border-bottom: $border-thin;
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
     #welcome {
         p {
             text-align: left;
@@ -14,22 +23,43 @@ main {
 
             li {
                 @include flex();
+
+                @include mq(md) {
+                    flex-direction: row;
+                }
             }
         }
         &-tech {
-            @include flex;
-            margin-top: 7%;
+            @include flex($d:row);
+            flex-wrap: wrap;
+            margin-bottom: 10%;
 
             img {
-                margin-top: -2%;
-            }
+                width: 26%;
+                height: auto;
 
-            div {
-                @include flex($d:row, $j:space-between);
+                @include mq(lg) {
+                    width: 21%;
+                }
+
+                &:nth-child(3n+2) {
+                    margin-top: 20%;
+
+                    @include mq(lg) {
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }
+    #folios-cot {
+        @include flex;
+        flex-wrap: wrap;
 
+        @include mq(md) {
+            flex-direction: row;
+        }
+    }
     .folios {
         &-card {
             @include flex;
@@ -38,9 +68,13 @@ main {
             border-radius: $folio-brdrad-sm;
             margin: 5% 0;
 
+            @include mq(md) {
+                width: $folio-width-md;
+            }
+
             img {
                 width: $folio-width-sm;
-                height: $folio-height-sm;
+                height: $folio-height;
                 border-radius: $folio-brdrad-sm;
             }
             h3 {
@@ -48,7 +82,7 @@ main {
                 @include flex($j:center);
                 position: absolute;
                 width: $folio-width-sm;
-                height: $folio-height-sm;
+                height: $folio-height;
                 margin: 0;
                 background: none;
                 transition: all 0.25s ease-in;

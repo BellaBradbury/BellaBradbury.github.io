@@ -5,10 +5,17 @@ $color-darkest: black;
 // ---------- BORDERS ---------- //
 $border-thin: 1px solid $color-darkest;
 
-// ---------- MARGIN ---------- //
+// ---------- LAYOUT ---------- //
 $pad-sect: 5% 10%;
 
 // ---------- PORTFOLIO SECTION ----------//
-$folio-height-sm: 50px;
+$folio-height: 50px;
 $folio-width-sm: 100%;
+$folio-width-md: 45%;
 $folio-brdrad-sm: 25px 50px;
+
+// ---------- BREAKPOINTS ---------- //
+$breakpoints: (
+    'md': 768px,
+    'lg': 1024px,
+);

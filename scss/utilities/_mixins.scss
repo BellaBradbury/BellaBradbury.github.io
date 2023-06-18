@@ -9,3 +9,12 @@
         width: -webkit-fill-available;
     }
 }
+
+// ---------- MEDIA QUERIES ---------- //
+@mixin mq($break) {
+    $value: map-get($breakpoints, $break);
+
+    @media (min-width: $value) {
+        @content;
+    }
+}
