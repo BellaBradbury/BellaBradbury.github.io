@@ -6,65 +6,69 @@
     <title>Bella Bradbury</title>
     <!-- <link rel="icon" type="image/x-icon" href=""> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="css/styles.css">
     <!-- *GOOGLE FONT LINKS HERE* -->
   </head>
 
   <body>
     <header>
-      <nav>
-        <img class="temp-img" src="imgs/temp-img.png" alt="My logo">
-        <ul id="nav-top">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#folios">PORTFOLIO</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+      <img class="temp-img" src="imgs/temp-img.png" alt="My logo">
+      <nav id="nav-top">
+        <ul class="nav-one">
+          <li><a href="#">H</a></li>
+          <li><a href="#folios">P</a></li>
+        </ul>
+        <ul class="nav-two">
+          <li><a href="#about">A</a></li>
+          <li><a href="#contact">C</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section id="welcome">
         <h1>big header text for the page!</h1>
         <p>short little tagline, maybe from GitHub or LinkedIn</p>
       </section>
 
       <section id="about">
         <h2>about</h2>
-        <img class="temp-img" src="imgs/temp-img.png" alt="my headshot">
-        <ul>
-            <li>
+        <ul class="about-jobs">
+          <li>
+              <a href="https://teamtreehouse.com" target="_blank">
                 <img class="temp-img" src="imgs/temp-img.png" alt="treehouse logo">
+              </a>
+              <div>
                 <h3>Slack Moderator</h3>
-                <a href="https://teamtreehouse.com" target="_blank">Treehouse</a>
-                <p>Mar 2023 - Current</p>
-            </li>
+                <p><small>Mar 2023 - Current</small></p>  
+              </div>
+          </li>
         </ul>
+        <img class="temp-img" src="imgs/temp-img.png" alt="my headshot">
         <p>here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me.</p>
         <p>here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me, here is one paragraph about me.</p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub</li>
-            <li>Slack</li>
-            <li>Node</li>
-            <li>Express</li>
-            <li>SQL</li>
-            <li>React</li>
-        </ul>
+        <div class="about-tech">
+          <img src="imgs/temp-img.png" alt="HTML ICON">
+          <img src="imgs/temp-img.png" alt="CSS ICON">
+          <img src="imgs/temp-img.png" alt="JS ICON">
+          <img src="imgs/temp-img.png" alt="GITHUB ICON">
+          <img src="imgs/temp-img.png" alt="SLACK ICON">
+          <img src="imgs/temp-img.png" alt="NODE ICON">
+          <img src="imgs/temp-img.png" alt="EXPRESS ICON">
+          <img src="imgs/temp-img.png" alt="SQL ICON">
+          <img src="imgs/temp-img.png" alt="REACT ICON">
+        </div>
       </section>
 
       <section id="folios">
         <h2>portfolio</h2>
-        <ul id="js-cot-folios">
+        <div id="folios-cot">
             <!-- PROJECTS DYNAMICALLY INSERTED VIA PROJECTS.JS -->
-        </ul>
+        </div>
       </section>
 
       <section id="contact">
         <h2>contact</h2>
-        <p>Get in touch!</p>
         <ul>
             <li><a href="https://github.com/bellabradbury">GitHub</a></li>
             <li><a href="mailto:bellabradbury.dev@gmail.com">Email</a></li>
@@ -73,15 +77,17 @@
     </main>
 
     <footer>
-        <a href="#top" id="nav-btn-sm">Top of Page</a>
-        <ul id="nav-btm-md">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#folios">PORTFOLIO</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
+      <div id="nav-btm">
         <img class="temp-img" src="imgs/temp-img.png" alt="my logo">
-        <p>&copy; Bella Bradbury, 2023</p>
+        <a href="#top" id="nav-btm-sm">Top of Page</a>
+        <ul id="nav-btm-md">
+            <li><a href="#">H</a></li>
+            <li><a href="#about">A</a></li>
+            <li><a href="#folios">P</a></li>
+            <li><a href="#contact">C</a></li>
+        </ul>
+      </div>
+      <p><small>&copy; Bella Bradbury, 2023</small></p>
     </footer>
   </body>
 
