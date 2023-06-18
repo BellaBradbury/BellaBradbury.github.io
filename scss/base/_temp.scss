@@ -23,8 +23,13 @@ li {
 }
 a {
     text-decoration: none;
+    color: black;
 }
 
 p {
     text-align: right;
+}
+
+* {
+    box-sizing: border-box;
 }

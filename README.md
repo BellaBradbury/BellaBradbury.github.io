@@ -27,6 +27,4 @@ Team Treehouse - Front End Web Development Techdegree - Project 9
 
 -OPEN TAGS-
 * body layout
-
--TO DO-
 * main layout

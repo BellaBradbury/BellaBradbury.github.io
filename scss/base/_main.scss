@@ -1,1 +1,90 @@
 // ---------- MAIN LAYOUT ---------- //
+main {
+    // WELCOME SECTION
+
+    .about {
+        &-jobs {
+            p {
+                text-align: left;
+            }
+
+            li {
+                @include flex();
+            }
+        }
+        &-tech {
+            @include flex;
+            margin-top: 7%;
+
+            img {
+                margin-top: -2%;
+            }
+
+            div {
+                @include flex($d:row, $j:space-between);
+            }
+        }
+    }
+
+    .folios {
+        &-card {
+            @include flex;
+            position: relative;
+            border: $border-thin;
+            border-radius: $folio-brdrad-sm;
+            margin: 5% 0;
+
+            img {
+                width: $folio-width-sm;
+                height: $folio-height-sm;
+                border-radius: $folio-brdrad-sm;
+            }
+            h3 {
+                opacity: 0;
+                @include flex($j:center);
+                position: absolute;
+                width: $folio-width-sm;
+                height: $folio-height-sm;
+                margin: 0;
+                background: none;
+                transition: all 0.25s ease-in;
+                border-radius: $folio-brdrad-sm;
+            }
+
+            &:hover > h3 {
+                opacity: 100;
+                background: rgba($color-lightest, .5);
+            }
+        }
+    }
+    #js-cot-folio_detail {
+        @include flex;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .folios-links {
+            @include flex($d:row);
+        }
+
+        p {
+            text-align: center;
+        }
+
+        #folio-tech {
+            @include flex($d:row);
+
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+    #contact {
+        ul {
+            @include flex($d:row);
+        }
+    }
+}
