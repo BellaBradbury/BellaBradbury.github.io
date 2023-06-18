@@ -17,6 +17,10 @@ main {
 
     .about {
         &-jobs {
+            @include mq(lg) {
+                @include flex($a:flex-end);
+            }
+
             p {
                 text-align: left;
             }
@@ -26,6 +30,16 @@ main {
 
                 @include mq(md) {
                     flex-direction: row;
+                }
+
+                @include mq(lg) {
+                    width: 50%;
+                }
+
+                div {
+                    @include mq(lg) {
+                        @include flex($d:row);
+                    }
                 }
             }
         }
@@ -38,12 +52,28 @@ main {
                 width: 26%;
                 height: auto;
 
-                @include mq(lg) {
+                @include mq(md) {
                     width: 21%;
+                }
+
+                @include mq(lg) {
+                    width: 17%;
                 }
 
                 &:nth-child(3n+2) {
                     margin-top: 20%;
+
+                    @include mq(md) {
+                        margin-top: 0;
+                    }
+                }
+
+                &:nth-child(even) {
+                    margin-top: 20%;
+                }
+
+                &:last-of-type {
+                    margin-top: 10%;
 
                     @include mq(lg) {
                         margin-top: 0;

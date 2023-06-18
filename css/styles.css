@@ -433,6 +433,15 @@ main section:last-of-type {
 main #welcome p {
   text-align: left;
 }
+@media (min-width: 1024px) {
+  main .about-jobs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: -webkit-fill-available;
+  }
+}
 main .about-jobs p {
   text-align: left;
 }
@@ -448,6 +457,20 @@ main .about-jobs li {
     flex-direction: row;
   }
 }
+@media (min-width: 1024px) {
+  main .about-jobs li {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  main .about-jobs li div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: -webkit-fill-available;
+  }
+}
 main .about-tech {
   display: flex;
   flex-direction: row;
@@ -461,16 +484,32 @@ main .about-tech img {
   width: 26%;
   height: auto;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   main .about-tech img {
     width: 21%;
+  }
+}
+@media (min-width: 1024px) {
+  main .about-tech img {
+    width: 17%;
   }
 }
 main .about-tech img:nth-child(3n+2) {
   margin-top: 20%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   main .about-tech img:nth-child(3n+2) {
+    margin-top: 0;
+  }
+}
+main .about-tech img:nth-child(even) {
+  margin-top: 20%;
+}
+main .about-tech img:last-of-type {
+  margin-top: 10%;
+}
+@media (min-width: 1024px) {
+  main .about-tech img:last-of-type {
     margin-top: 0;
   }
 }
