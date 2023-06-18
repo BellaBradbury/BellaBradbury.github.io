@@ -43,7 +43,6 @@ body {
 
     footer {
         padding: $pad-sect;
-        text-align: center;
 
         #nav-btm {
             @include flex($d:row, $j:space-between);
@@ -54,6 +53,10 @@ body {
             &-md {
                 display: none;
             }
+        }
+
+        p {
+            text-align: center;
         }
     }
 }
