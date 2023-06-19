@@ -314,6 +314,7 @@ body {
 body header {
   padding: 5% 10%;
   height: 100vh;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -346,7 +347,7 @@ body header #nav-top ul {
   justify-content: space-between;
   align-items: center;
   width: -webkit-fill-available;
-  width: 70%;
+  width: 80%;
 }
 @media (min-width: 768px) {
   body header #nav-top ul {
@@ -355,14 +356,27 @@ body header #nav-top ul {
   }
 }
 body header #nav-top ul li {
-  width: 25px;
-  height: 25px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 @media (min-width: 768px) {
   body header #nav-top ul li {
     width: 100px;
     height: 100px;
     margin: 10% 10%;
+  }
+}
+body header #nav-top ul img {
+  width: 50%;
+}
+@media (min-width: 1024px) {
+  body header #nav-top ul img {
+    width: 80%;
   }
 }
 body header #nav-top .nav-one {
@@ -390,6 +404,7 @@ body main {
 }
 body footer {
   padding: 5% 10%;
+  border-top: 1px solid black;
 }
 body footer #nav-btm {
   display: flex;
@@ -397,6 +412,14 @@ body footer #nav-btm {
   justify-content: space-between;
   align-items: center;
   width: -webkit-fill-available;
+}
+body footer #nav-btm img {
+  width: 20%;
+}
+body footer #nav-btm-sm {
+  width: 40%;
+  text-align: center;
+  font-size: 3rem;
 }
 @media (min-width: 768px) {
   body footer #nav-btm-sm {
@@ -413,7 +436,15 @@ body footer #nav-btm-md {
     justify-content: space-evenly;
     align-items: center;
     width: -webkit-fill-available;
-    width: 50%;
+    width: 80%;
+  }
+  body footer #nav-btm-md li {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  body footer #nav-btm-md li img {
+    width: 30%;
   }
 }
 body footer p {
@@ -430,6 +461,22 @@ main section:last-of-type {
 main #welcome p {
   text-align: left;
 }
+@media (min-width: 768px) {
+  main #about p {
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  main #about p:last-of-type {
+    text-align: right;
+  }
+}
+main .about-hdst {
+  width: 100%;
+  border-radius: 50px 25px;
+  border: 1px solid black;
+  margin: 5% 0;
+}
 @media (min-width: 1024px) {
   main .about-jobs {
     display: flex;
@@ -439,8 +486,16 @@ main #welcome p {
     width: -webkit-fill-available;
   }
 }
-main .about-jobs p {
-  text-align: left;
+main .about-jobs a {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  main .about-jobs a {
+    text-align: right;
+  }
+}
+main .about-jobs img {
+  width: 25%;
 }
 main .about-jobs li {
   display: flex;
@@ -448,15 +503,11 @@ main .about-jobs li {
   justify-content: space-evenly;
   align-items: center;
   width: -webkit-fill-available;
+  text-align: center;
 }
 @media (min-width: 768px) {
   main .about-jobs li {
     flex-direction: row;
-  }
-}
-@media (min-width: 1024px) {
-  main .about-jobs li {
-    width: 50%;
   }
 }
 @media (min-width: 1024px) {
@@ -466,6 +517,15 @@ main .about-jobs li {
     justify-content: space-evenly;
     align-items: center;
     width: -webkit-fill-available;
+    text-align: left;
+  }
+}
+main .about-jobs li div p {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  main .about-jobs li div p {
+    text-align: left;
   }
 }
 main .about-tech {
@@ -475,20 +535,29 @@ main .about-tech {
   align-items: center;
   width: -webkit-fill-available;
   flex-wrap: wrap;
-  margin-bottom: 10%;
+  margin-bottom: 35%;
+}
+@media (min-width: 1024px) {
+  main .about-tech {
+    margin-bottom: 15%;
+  }
 }
 main .about-tech img {
-  width: 26%;
+  width: 25%;
+  padding: 5%;
   height: auto;
+  margin-bottom: -20%;
 }
 @media (min-width: 768px) {
   main .about-tech img {
-    width: 21%;
+    width: 15%;
+    padding: 2%;
+    margin-bottom: -10%;
   }
 }
 @media (min-width: 1024px) {
   main .about-tech img {
-    width: 17%;
+    width: 10%;
   }
 }
 main .about-tech img:nth-child(3n+2) {
@@ -552,7 +621,8 @@ main .folios-card img {
   object-fit: cover;
 }
 main .folios-card h3 {
-  opacity: 0;
+  opacity: 100;
+  background: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -561,13 +631,7 @@ main .folios-card h3 {
   width: 100%;
   height: 50px;
   margin: 0;
-  background: none;
-  transition: all 0.25s ease-in;
   border-radius: 25px 50px;
-}
-main .folios-card:hover > h3 {
-  opacity: 100;
-  background: rgba(255, 255, 255, 0.5);
 }
 main .folios-card:focus > h3 {
   opacity: 100;
@@ -582,6 +646,10 @@ main #js-cot-folio_detail {
   justify-content: space-evenly;
   align-items: center;
   width: -webkit-fill-available;
+}
+main #js-cot-folio_detail .img-modal {
+  border: 1px solid black;
+  border-radius: 50px 25px;
 }
 main #js-cot-folio_detail img {
   width: 100%;
@@ -614,28 +682,20 @@ main #contact ul {
   justify-content: space-evenly;
   align-items: center;
   width: -webkit-fill-available;
+  text-align: center;
 }
-
-img {
-  height: 50px;
-  width: 50px;
+main #contact ul img {
+  width: 30%;
 }
-
-header img {
-  width: 100%;
-  height: auto;
+@media (min-width: 768px) {
+  main #contact ul img {
+    width: 20%;
+  }
 }
-
-header {
-  background-color: pink;
-}
-
-main {
-  background-color: purple;
-}
-
-footer {
-  background-color: blue;
+@media (min-width: 1024px) {
+  main #contact ul img {
+    width: 10%;
+  }
 }
 
 ul {

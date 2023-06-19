@@ -15,30 +15,64 @@ main {
         }
     }
 
+    #about {
+        p {
+            @include mq(md) {
+                text-align: left;
+            }
+
+            &:last-of-type {
+                @include mq(md) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
     .about {
+        &-hdst {
+            width: 100%;
+            border-radius: 50px 25px;
+            border: $border-thin;
+            margin: 5% 0;
+        }
         &-jobs {
             @include mq(lg) {
                 @include flex($a:flex-end);
             }
 
-            p {
-                text-align: left;
+            a {
+                text-align: center;
+                @include mq(md) {
+                    text-align: right;
+                }
+            }
+
+            img {
+                width: 25%;
             }
 
             li {
                 @include flex();
+                text-align: center;
 
                 @include mq(md) {
                     flex-direction: row;
                 }
 
-                @include mq(lg) {
-                    width: 50%;
-                }
+
 
                 div {
                     @include mq(lg) {
                         @include flex($d:row);
+                        text-align: left;
+                    }
+
+                    p {
+                        text-align: center;
+                        @include mq(lg) {
+                            text-align: left;
+                        }
                     }
                 }
             }
@@ -46,18 +80,27 @@ main {
         &-tech {
             @include flex($d:row);
             flex-wrap: wrap;
-            margin-bottom: 10%;
+            margin-bottom: 35%;
+
+            @include mq(lg) {
+                margin-bottom: 15%;
+            }
 
             img {
-                width: 26%;
+                width: 25%;
+                padding: 5%;
                 height: auto;
+                margin-bottom: -20%;
+
 
                 @include mq(md) {
-                    width: 21%;
+                    width: 15%;
+                    padding: 2%;
+                    margin-bottom: -10%;
                 }
 
                 @include mq(lg) {
-                    width: 17%;
+                    width: 10%;
                 }
 
                 &:nth-child(3n+2) {
@@ -114,20 +157,14 @@ main {
                 object-fit: cover;
             }
             h3 {
-                opacity: 0;
+                opacity: 100;
+                background: rgba($color-lightest, .5);
                 @include flex($j:center);
                 position: absolute;
                 width: $folio-width-sm;
                 height: $folio-height;
                 margin: 0;
-                background: none;
-                transition: all 0.25s ease-in;
                 border-radius: $folio-brdrad-sm;
-            }
-
-            &:hover > h3 {
-                opacity: 100;
-                background: rgba($color-lightest, .5);
             }
 
             &:focus > h3{
@@ -141,6 +178,11 @@ main {
     }
     #js-cot-folio_detail {
         @include flex;
+
+        .img-modal {
+            border: $border-thin;
+            border-radius: 50px 25px;
+        }
 
         img {
             width: 100%;
@@ -167,6 +209,19 @@ main {
     #contact {
         ul {
             @include flex($d:row);
+            text-align: center;
+
+            img {
+                width: 30%;
+
+                @include mq(md) {
+                    width: 20%;
+                }
+
+                @include mq(lg) {
+                    width: 10%;
+                }
+            }
         }
     }
 }
