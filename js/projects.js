@@ -11,11 +11,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/Interactive-Registration-Form",
         "image_urls": {
             "thumbnail": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/thumbnail/registration-form.png",
                 "alt": "thumbnail alt text"
             },
             "modal": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/modal/registration-form.png",
                 "alt": "modal alt text"
             }
         },
@@ -28,11 +28,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/OOP-Word-Guessing-Game",
         "image_urls": {
             "thumbnail": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/thumbnail/phrase-hunter.png",
                 "alt": "thumbnail alt text"
             },
             "modal": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/modal/phrase-hunter.png",
                 "alt": "modal alt text"
             }
         },
@@ -45,11 +45,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/web-app-dashboard",
         "image_urls": {
             "thumbnail": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/thumbnail/dashboard.png",
                 "alt": "thumbnail alt text"
             },
             "modal": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/modal/dashboard.png",
                 "alt": "modal alt text"
             }
         },
@@ -62,11 +62,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/Random-Quote-Generator",
         "image_urls": {
             "thumbnail": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/thumbnail/quote-generator.png",
                 "alt": "thumbnail alt text"
             },
             "modal": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/modal/quote-generator.png",
                 "alt": "modal alt text"
             }
         },
@@ -79,11 +79,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/Student-Database",
         "image_urls": {
             "thumbnail": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/thumbnail/student-database.png",
                 "alt": "thumbnail alt text"
             },
             "modal": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/modal/student-database.png",
                 "alt": "modal alt text"
             }
         },
@@ -96,11 +96,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/web-style-guide",
         "image_urls": {
             "thumbnail": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/thumbnail/style-guide.png",
                 "alt": "thumbnail alt text"
             },
             "modal": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/modal/style-guide.png",
                 "alt": "modal alt text"
             }
         },
@@ -113,11 +113,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/interactive-photo-gallery",
         "image_urls": {
             "thumbnail": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/thumbnail/photo-gallery.png",
                 "alt": "thumbnail alt text"
             },
             "modal": {
-                "src": "../imgs/temp-img.png",
+                "src": "../img/modal/photo-gallery.png",
                 "alt": "modal alt text"
             }
         },
@@ -174,7 +174,7 @@ function createModal(card, itm, type) {
         <img src="${itm.image_urls.modal.src}" class="img-modal" alt="${itm.image_urls.modal.alt}">
         <h4>${itm.project_name}</h4>
         <div class="folios-links">
-            <a href="${itm.live_link} target="_blank">LIVE</a>
+            <a href="${itm.live_link}" target="_blank">LIVE</a>
             <a href="${itm.github_link}" target="_blank">REPO</a>
         </div>
         <p>${itm.description}</p>

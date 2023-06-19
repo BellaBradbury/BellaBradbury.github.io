@@ -111,6 +111,7 @@ main {
                 width: $folio-width-sm;
                 height: $folio-height;
                 border-radius: $folio-brdrad-sm;
+                object-fit: cover;
             }
             h3 {
                 opacity: 0;
