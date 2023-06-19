@@ -1,0 +1,37 @@
+// ---------- ANIMATIONS ---------- //
+@keyframes offset {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes display {
+    100% {
+        opacity: 100;
+    }
+}
+
+// ---------- MAIN LOGO ---------- //
+.logo-draw {
+    stroke: purple;
+    stroke-width: 1;
+    fill: none;
+    stroke-dasharray: 645;
+    stroke-dashoffset: 645;
+
+    &-1 {
+        animation: offset 3s linear forwards;
+    }
+    &-2 {
+        animation: offset 3s 1.5s linear forwards;
+    }
+    &-3 {
+        animation: offset 3s 3s linear forwards;
+    }
+}
+.letter-b-out {
+    opacity: 0;
+    stroke: darken(purple, 10);
+    fill: darken(purple, 10);
+
+    animation: display 1.5s 4.5s linear forwards;
+}

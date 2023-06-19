@@ -188,16 +188,16 @@ function createModal(card, itm, type) {
         const techIcon = document.createElement('img');
         
         if (tech === 'js') {
-            techIcon.src = '../imgs/temp-img.png';
+            techIcon.src = '../imgs/javascript.svg';
             techIcon.alt = 'JS icon';
         } else if (tech === 'html') {
-            techIcon.src = '../imgs/temp-img.png';
+            techIcon.src = '../imgs/html.svg';
             techIcon.alt = 'HTML icon';
         } else if (tech === 'css') {
-            techIcon.src = '../imgs/temp-img.png';
+            techIcon.src = '../imgs/css.svg';
             techIcon.alt = 'CSS icon';
         } else if (tech === 'sass') {
-            techIcon.src = '../imgs/temp-img.png';
+            techIcon.src = '../imgs/sass.svg';
             techIcon.alt = 'SASS icon';
         }
 

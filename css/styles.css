@@ -313,6 +313,7 @@ body {
 }
 body header {
   padding: 5% 10%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -324,14 +325,8 @@ body header {
     flex-direction: row;
   }
 }
-body header img {
-  margin: auto;
-}
-@media (min-width: 768px) {
-  body header img {
-    height: 75px;
-    width: 75px;
-  }
+body header svg {
+  width: 100%;
 }
 body header #nav-top {
   display: flex;
@@ -342,8 +337,7 @@ body header #nav-top {
 }
 @media (min-width: 768px) {
   body header #nav-top {
-    flex-direction: row;
-    justify-content: flex-end;
+    width: 30%;
   }
 }
 body header #nav-top ul {
@@ -356,6 +350,7 @@ body header #nav-top ul {
 }
 @media (min-width: 768px) {
   body header #nav-top ul {
+    flex-direction: column;
     width: 35%;
   }
 }
@@ -365,9 +360,9 @@ body header #nav-top ul li {
 }
 @media (min-width: 768px) {
   body header #nav-top ul li {
-    width: 50px;
-    height: 50px;
-    margin: 0 10%;
+    width: 100px;
+    height: 100px;
+    margin: 10% 10%;
   }
 }
 body header #nav-top .nav-one {
@@ -377,6 +372,7 @@ body header #nav-top .nav-one {
 @media (min-width: 768px) {
   body header #nav-top .nav-one {
     margin: 0;
+    align-self: center;
   }
 }
 body header #nav-top .nav-two {
@@ -386,6 +382,7 @@ body header #nav-top .nav-two {
 @media (min-width: 768px) {
   body header #nav-top .nav-two {
     margin: 0;
+    align-self: center;
   }
 }
 body main {
@@ -659,6 +656,40 @@ p {
 
 * {
   box-sizing: border-box;
+}
+
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes display {
+  100% {
+    opacity: 100;
+  }
+}
+.logo-draw {
+  stroke: purple;
+  stroke-width: 1;
+  fill: none;
+  stroke-dasharray: 645;
+  stroke-dashoffset: 645;
+}
+.logo-draw-1 {
+  animation: offset 3s linear forwards;
+}
+.logo-draw-2 {
+  animation: offset 3s 1.5s linear forwards;
+}
+.logo-draw-3 {
+  animation: offset 3s 3s linear forwards;
+}
+
+.letter-b-out {
+  opacity: 0;
+  stroke: #4d004d;
+  fill: #4d004d;
+  animation: display 1.5s 4.5s linear forwards;
 }
 
 /*# sourceMappingURL=styles.css.map */

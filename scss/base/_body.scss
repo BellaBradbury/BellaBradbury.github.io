@@ -5,6 +5,7 @@ body {
 
     header {
         padding: $pad-sect;
+        height: 100vh;
 
         @include flex;
 
@@ -12,21 +13,15 @@ body {
             flex-direction: row;
         }
 
-        img {
-            margin: auto;
-
-            @include mq(md) {
-                height: 75px;
-                width: 75px;
-            }
+        svg {
+            width: 100%;
         }
 
         #nav-top {
             @include flex;
 
             @include mq(md) {
-                flex-direction: row;
-                justify-content: flex-end;
+                width: 30%;
             }
 
             ul {
@@ -35,6 +30,7 @@ body {
                 width: 70%;
 
                 @include mq('md') {
+                    flex-direction: column;
                     width: 35%;
                 }
 
@@ -43,9 +39,9 @@ body {
                     height: 25px;
 
                     @include mq(md) {
-                        width: 50px;
-                        height: 50px;
-                        margin: 0 10%;
+                        width: 100px;
+                        height: 100px;
+                        margin: 10% 10%;
                     }
                 }
             }
@@ -56,6 +52,7 @@ body {
 
                 @include mq(md) {
                     margin: 0;
+                    align-self: center;
                 }
             }
             .nav-two {
@@ -64,6 +61,7 @@ body {
 
                 @include mq(md) {
                     margin: 0;
+                    align-self: center;
                 }
             }
         }
