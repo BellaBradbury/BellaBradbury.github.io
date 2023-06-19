@@ -623,6 +623,11 @@ img {
   width: 50px;
 }
 
+header img {
+  width: 100%;
+  height: auto;
+}
+
 header {
   background-color: pink;
 }
