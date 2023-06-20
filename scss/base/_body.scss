@@ -6,7 +6,9 @@ body {
     header {
         padding: $pad-sect;
         height: 100vh;
-        border-bottom: $border-thin;
+        border-bottom: $border-thick;
+        background-color: $color-primary;
+        box-shadow: 0 10px 20px rgba($color-darkest, .15);
 
         @include flex;
 
@@ -80,11 +82,15 @@ body {
 
     main {
         padding: $pad-sect;
+        background-color: $color-primary-dark;
     }
 
     footer {
         padding: $pad-sect;
-        border-top: $border-thin;
+        border-top: $border-thick;
+        background-color: $color-primary;
+        box-shadow: 0 -10px 20px rgba($color-darkest, .15);
+
 
         #nav-btm {
             @include flex($d:row, $j:space-between);

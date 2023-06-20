@@ -1,4 +1,16 @@
 // ---------- COLORS ---------- //
+$color-primary: lighten(black, 5);
+$color-primary-light: lighten($color-primary, 75);
+$color-primary-dark: lighten($color-primary, 15);
+
+$color-secondary: #759BCC;
+$color-secondary-light: lighten($color-secondary, 20);
+$color-tertiary: #9C402B;
+
+$color-accent: #6f2c99;
+$color-accent-light: lighten($color-accent, 15);
+$color-accent-dark: darken($color-accent, 15);
+
 $color-focus: red;
 
 $color-lightest: white;
@@ -6,6 +18,8 @@ $color-darkest: black;
 
 // ---------- BORDERS ---------- //
 $border-thin: 1px solid $color-darkest;
+$border-thick: 2px solid $color-darkest;
+
 $border-focus: 3px solid $color-focus;
 
 // ---------- LAYOUT ---------- //
@@ -23,3 +37,4 @@ $breakpoints: (
     'md': 768px,
     'lg': 1024px,
 );
+

@@ -12,7 +12,7 @@
 
 // ---------- MAIN LOGO ---------- //
 .logo-draw {
-    stroke: purple;
+    stroke: $color-accent;
     stroke-width: 1;
     fill: none;
     stroke-dasharray: 645;
@@ -30,8 +30,13 @@
 }
 .letter-b-out {
     opacity: 0;
-    stroke: darken(purple, 10);
-    fill: darken(purple, 10);
+    stroke: $color-accent-dark;
+    fill: $color-accent-dark;
 
     animation: display 1.5s 4.5s linear forwards;
+}
+
+// ---------- ICONS ---------- //
+.svg-icn {
+  width: 500px;
 }

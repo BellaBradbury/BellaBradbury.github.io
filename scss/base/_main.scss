@@ -35,6 +35,7 @@ main {
             border-radius: 50px 25px;
             border: $border-thin;
             margin: 5% 0;
+            box-shadow: 0 5px 10px rgba($color-darkest, .25);
         }
         &-jobs {
             @include mq(lg) {
@@ -91,11 +92,14 @@ main {
                 padding: 5%;
                 height: auto;
                 margin-bottom: -20%;
+                background-color: $color-primary-light;
+                border: 5px dotted $color-tertiary;
+                border-radius: 50%;
 
 
                 @include mq(md) {
                     width: 15%;
-                    padding: 2%;
+                    padding: 1%;
                     margin-bottom: -10%;
                 }
 
@@ -182,6 +186,7 @@ main {
         .img-modal {
             border: $border-thin;
             border-radius: 50px 25px;
+            box-shadow: 0 5px 10px rgba($color-darkest, .25);
         }
 
         img {
@@ -201,8 +206,20 @@ main {
             @include flex($d:row);
 
             img {
-                height: 50px;
+                height: auto;
                 width: 50px;
+                padding: 1%;
+                background-color: $color-primary-light;
+                border: 5px dotted $color-tertiary;
+                border-radius: 50%;
+
+                @include mq(md) {
+                    width: 75px;
+                }
+
+                @include mq(lg) {
+                    width: 100px;
+                }
             }
         }
     }
@@ -215,11 +232,11 @@ main {
                 width: 30%;
 
                 @include mq(md) {
-                    width: 20%;
+                    width: 25%;
                 }
 
                 @include mq(lg) {
-                    width: 10%;
+                    width: 20%;
                 }
             }
         }

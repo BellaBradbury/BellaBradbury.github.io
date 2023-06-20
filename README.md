@@ -26,9 +26,7 @@ Team Treehouse - Front End Web Development Techdegree - Project 9
 * Interactive Photo Gallery
 
 -OPEN TAGS-
-* body layout
-* main layout
+< design
 
 -TO DO-
 * accessibility
-* design

@@ -314,7 +314,9 @@ body {
 body header {
   padding: 5% 10%;
   height: 100vh;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
+  background-color: #0d0d0d;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -401,10 +403,13 @@ body header #nav-top .nav-two {
 }
 body main {
   padding: 5% 10%;
+  background-color: #333333;
 }
 body footer {
   padding: 5% 10%;
-  border-top: 1px solid black;
+  border-top: 2px solid black;
+  background-color: #0d0d0d;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
 }
 body footer #nav-btm {
   display: flex;
@@ -476,6 +481,7 @@ main .about-hdst {
   border-radius: 50px 25px;
   border: 1px solid black;
   margin: 5% 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 1024px) {
   main .about-jobs {
@@ -547,11 +553,14 @@ main .about-tech img {
   padding: 5%;
   height: auto;
   margin-bottom: -20%;
+  background-color: #cccccc;
+  border: 5px dotted #9C402B;
+  border-radius: 50%;
 }
 @media (min-width: 768px) {
   main .about-tech img {
     width: 15%;
-    padding: 2%;
+    padding: 1%;
     margin-bottom: -10%;
   }
 }
@@ -650,6 +659,7 @@ main #js-cot-folio_detail {
 main #js-cot-folio_detail .img-modal {
   border: 1px solid black;
   border-radius: 50px 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 main #js-cot-folio_detail img {
   width: 100%;
@@ -673,8 +683,22 @@ main #js-cot-folio_detail #folio-tech {
   width: -webkit-fill-available;
 }
 main #js-cot-folio_detail #folio-tech img {
-  height: 50px;
+  height: auto;
   width: 50px;
+  padding: 1%;
+  background-color: #cccccc;
+  border: 5px dotted #9C402B;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  main #js-cot-folio_detail #folio-tech img {
+    width: 75px;
+  }
+}
+@media (min-width: 1024px) {
+  main #js-cot-folio_detail #folio-tech img {
+    width: 100px;
+  }
 }
 main #contact ul {
   display: flex;
@@ -689,12 +713,12 @@ main #contact ul img {
 }
 @media (min-width: 768px) {
   main #contact ul img {
-    width: 20%;
+    width: 25%;
   }
 }
 @media (min-width: 1024px) {
   main #contact ul img {
-    width: 10%;
+    width: 20%;
   }
 }
 
@@ -730,7 +754,7 @@ p {
   }
 }
 .logo-draw {
-  stroke: purple;
+  stroke: #6f2c99;
   stroke-width: 1;
   fill: none;
   stroke-dasharray: 645;
@@ -748,9 +772,13 @@ p {
 
 .letter-b-out {
   opacity: 0;
-  stroke: #4d004d;
-  fill: #4d004d;
+  stroke: #441b5e;
+  fill: #441b5e;
   animation: display 1.5s 4.5s linear forwards;
+}
+
+.svg-icn {
+  width: 500px;
 }
 
 /*# sourceMappingURL=styles.css.map */
