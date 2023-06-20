@@ -1,10 +1,10 @@
 // ---------- MAIN LAYOUT ---------- //
 main {
     section {
-        margin: 5% 0;
-        border-bottom: $border-thin;
+        margin: 15% 0 5% 0;
+        border-top: $border-thin;
 
-        &:last-of-type {
+        &:first-of-type {
             border: none;
         }
     }
@@ -44,18 +44,22 @@ main {
 
             a {
                 text-align: center;
-                @include mq(md) {
-                    text-align: right;
+                width: 25%;
+
+
+                &:focus, &:hover {
+                    @include focus;
                 }
             }
 
             img {
-                width: 25%;
+                width: 70%;
             }
 
             li {
                 @include flex();
                 text-align: center;
+                width: 70%;
 
                 @include mq(md) {
                     flex-direction: row;
@@ -67,6 +71,10 @@ main {
                     @include mq(lg) {
                         @include flex($d:row);
                         text-align: left;
+                    }
+
+                    h3 {
+                        color: $color-light;
                     }
 
                     p {
@@ -83,28 +91,33 @@ main {
             flex-wrap: wrap;
             margin-bottom: 35%;
 
+            @include mq(md) {
+                margin-bottom: 25%;
+            }
+
             @include mq(lg) {
-                margin-bottom: 15%;
+                margin-bottom: 20%;
             }
 
             img {
-                width: 25%;
+                width: 20%;
                 padding: 5%;
                 height: auto;
-                margin-bottom: -20%;
+                margin: 0 2% -5% 2%;
                 background-color: $color-primary-light;
                 border: 5px dotted $color-tertiary;
                 border-radius: 50%;
 
 
                 @include mq(md) {
-                    width: 15%;
+                    width: 10%;
                     padding: 1%;
-                    margin-bottom: -10%;
+                    margin-bottom: -15%;
                 }
 
                 @include mq(lg) {
-                    width: 10%;
+                    margin-left: 0;
+                    margin-right: 0;
                 }
 
                 &:nth-child(3n+2) {
@@ -171,12 +184,46 @@ main {
                 border-radius: $folio-brdrad-sm;
             }
 
-            &:focus > h3{
-                opacity: 100;
-                background: rgba($color-lightest, .5);
-            }
-            &:focus {
+            &:focus, &:hover {
+                outline: none;
                 border: $border-focus;
+                transform: scale(1.25);
+            }
+            &:focus > h3, &:hover > h3 {
+                outline: none;
+                border: $border-focus;
+                background-color: rgba($color-accent-light, .5);
+                text-shadow: 0 0 10px $color-accent;
+                color: $color-accent-dark;
+            }
+ 
+        }
+        &-links {
+            a {
+                background-color: $color-secondary-dark;
+                width: 40%;
+                text-align: center;
+                padding: 2% 0;
+                font-size: 1.25rem;
+                text-shadow: 1px 1px 3px $color-darkest;
+                border: 2px solid $color-secondary;
+                border-radius: 25px 0 0 25px;
+
+                &:last-of-type {
+                    border-radius: 0 25px 25px 0;
+                }
+
+                @include mq(md) {
+                    width: 30%;
+                }
+
+                &:hover, &:focus {
+                    outline: none;
+                    border: $border-focus;
+                    background-color: rgba($color-accent-light, .25);
+                    padding: 2%;
+                    transform: scale(1.25);
+                }
             }
         }
     }
@@ -196,6 +243,10 @@ main {
 
         .folios-links {
             @include flex($d:row);
+        }
+
+        h4 {
+            color: $color-light;
         }
 
         p {
@@ -227,16 +278,37 @@ main {
         ul {
             @include flex($d:row);
             text-align: center;
+            
+            li {
+                width: 50%;
 
-            img {
-                width: 30%;
+                a {
+                    img {
+                        width: 40%;
+                        padding: 5%;
+                        background-color: $color-secondary-dark;
+                        border: 2px dotted $color-secondary;
+                        border-radius: 50%;
 
-                @include mq(md) {
-                    width: 25%;
-                }
+                        @include mq(md) {
+                            width: 25%;
+                        }
 
-                @include mq(lg) {
-                    width: 20%;
+                        @include mq(lg) {
+                            width: 20%;
+                        }
+                    }
+
+                    &:hover, &:focus {
+                        outline: none;
+                    }
+                    &:hover > img, &:focus > img {
+                        outline: none;
+                        border: $border-focus;
+                        background-color: rgba($color-accent-light, .25);
+                        padding: 2%;
+                        transform: scale(1.25);
+                    }
                 }
             }
         }

@@ -48,6 +48,12 @@ body {
                         height: 100px;
                         margin: 10% 10%;
                     }
+
+                    a {
+                        &:hover, &:focus {
+                            @include focus;
+                        }
+                    }
                 }
 
                 img {
@@ -118,9 +124,19 @@ body {
                     li {
                         text-align: center;
 
-                        img {
-                            @include mq(md) {
-                                width: 30%;
+                        a {
+                            &:hover, &:focus {
+                                outline: none;
+                            }
+                            &:hover > img, &:focus > img {
+                                @include focus;
+                            }
+
+
+                            img {
+                                @include mq(md) {
+                                    width: 30%;
+                                }
                             }
                         }
                     }

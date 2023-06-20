@@ -18,3 +18,13 @@
         @content;
     }
 }
+
+// ---------- FOCUS STATES ---------- //
+@mixin focus() {
+    outline: none;
+    border: $border-focus;
+    background-color: rgba($color-accent-light, .25);
+    padding: 5%;
+    transform: scale(1.5);
+    border-radius: 25px 0 25px 0;
+}

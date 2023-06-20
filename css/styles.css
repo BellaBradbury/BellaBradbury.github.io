@@ -307,6 +307,10 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   overscroll-behavior: none;
@@ -372,6 +376,14 @@ body header #nav-top ul li {
     height: 100px;
     margin: 10% 10%;
   }
+}
+body header #nav-top ul li a:hover, body header #nav-top ul li a:focus {
+  outline: none;
+  border: 3px solid #6f2c99;
+  background-color: rgba(152, 71, 202, 0.25);
+  padding: 5%;
+  transform: scale(1.5);
+  border-radius: 25px 0 25px 0;
 }
 body header #nav-top ul img {
   width: 50%;
@@ -446,9 +458,20 @@ body footer #nav-btm-md {
   body footer #nav-btm-md li {
     text-align: center;
   }
+  body footer #nav-btm-md li a:hover, body footer #nav-btm-md li a:focus {
+    outline: none;
+  }
+  body footer #nav-btm-md li a:hover > img, body footer #nav-btm-md li a:focus > img {
+    outline: none;
+    border: 3px solid #6f2c99;
+    background-color: rgba(152, 71, 202, 0.25);
+    padding: 5%;
+    transform: scale(1.5);
+    border-radius: 25px 0 25px 0;
+  }
 }
 @media (min-width: 768px) and (min-width: 768px) {
-  body footer #nav-btm-md li img {
+  body footer #nav-btm-md li a img {
     width: 30%;
   }
 }
@@ -457,10 +480,10 @@ body footer p {
 }
 
 main section {
-  margin: 5% 0;
-  border-bottom: 1px solid black;
+  margin: 15% 0 5% 0;
+  border-top: 1px solid black;
 }
-main section:last-of-type {
+main section:first-of-type {
   border: none;
 }
 main #welcome p {
@@ -494,14 +517,18 @@ main .about-hdst {
 }
 main .about-jobs a {
   text-align: center;
+  width: 25%;
 }
-@media (min-width: 768px) {
-  main .about-jobs a {
-    text-align: right;
-  }
+main .about-jobs a:focus, main .about-jobs a:hover {
+  outline: none;
+  border: 3px solid #6f2c99;
+  background-color: rgba(152, 71, 202, 0.25);
+  padding: 5%;
+  transform: scale(1.5);
+  border-radius: 25px 0 25px 0;
 }
 main .about-jobs img {
-  width: 25%;
+  width: 70%;
 }
 main .about-jobs li {
   display: flex;
@@ -510,6 +537,7 @@ main .about-jobs li {
   align-items: center;
   width: -webkit-fill-available;
   text-align: center;
+  width: 70%;
 }
 @media (min-width: 768px) {
   main .about-jobs li {
@@ -525,6 +553,9 @@ main .about-jobs li {
     width: -webkit-fill-available;
     text-align: left;
   }
+}
+main .about-jobs li div h3 {
+  color: #a6a6a6;
 }
 main .about-jobs li div p {
   text-align: center;
@@ -543,30 +574,36 @@ main .about-tech {
   flex-wrap: wrap;
   margin-bottom: 35%;
 }
+@media (min-width: 768px) {
+  main .about-tech {
+    margin-bottom: 25%;
+  }
+}
 @media (min-width: 1024px) {
   main .about-tech {
-    margin-bottom: 15%;
+    margin-bottom: 20%;
   }
 }
 main .about-tech img {
-  width: 25%;
+  width: 20%;
   padding: 5%;
   height: auto;
-  margin-bottom: -20%;
+  margin: 0 2% -5% 2%;
   background-color: #cccccc;
   border: 5px dotted #9C402B;
   border-radius: 50%;
 }
 @media (min-width: 768px) {
   main .about-tech img {
-    width: 15%;
+    width: 10%;
     padding: 1%;
-    margin-bottom: -10%;
+    margin-bottom: -15%;
   }
 }
 @media (min-width: 1024px) {
   main .about-tech img {
-    width: 10%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 main .about-tech img:nth-child(3n+2) {
@@ -642,12 +679,42 @@ main .folios-card h3 {
   margin: 0;
   border-radius: 25px 50px;
 }
-main .folios-card:focus > h3 {
-  opacity: 100;
-  background: rgba(255, 255, 255, 0.5);
+main .folios-card:focus, main .folios-card:hover {
+  outline: none;
+  border: 3px solid #6f2c99;
+  transform: scale(1.25);
 }
-main .folios-card:focus {
-  border: 3px solid red;
+main .folios-card:focus > h3, main .folios-card:hover > h3 {
+  outline: none;
+  border: 3px solid #6f2c99;
+  background-color: rgba(152, 71, 202, 0.5);
+  text-shadow: 0 0 10px #6f2c99;
+  color: #441b5e;
+}
+main .folios-links a {
+  background-color: #203755;
+  width: 40%;
+  text-align: center;
+  padding: 2% 0;
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 3px black;
+  border: 2px solid #759BCC;
+  border-radius: 25px 0 0 25px;
+}
+main .folios-links a:last-of-type {
+  border-radius: 0 25px 25px 0;
+}
+@media (min-width: 768px) {
+  main .folios-links a {
+    width: 30%;
+  }
+}
+main .folios-links a:hover, main .folios-links a:focus {
+  outline: none;
+  border: 3px solid #6f2c99;
+  background-color: rgba(152, 71, 202, 0.25);
+  padding: 2%;
+  transform: scale(1.25);
 }
 main #js-cot-folio_detail {
   display: flex;
@@ -671,6 +738,9 @@ main #js-cot-folio_detail .folios-links {
   justify-content: space-evenly;
   align-items: center;
   width: -webkit-fill-available;
+}
+main #js-cot-folio_detail h4 {
+  color: #a6a6a6;
 }
 main #js-cot-folio_detail p {
   text-align: center;
@@ -708,18 +778,69 @@ main #contact ul {
   width: -webkit-fill-available;
   text-align: center;
 }
-main #contact ul img {
-  width: 30%;
+main #contact ul li {
+  width: 50%;
+}
+main #contact ul li a img {
+  width: 40%;
+  padding: 5%;
+  background-color: #203755;
+  border: 2px dotted #759BCC;
+  border-radius: 50%;
 }
 @media (min-width: 768px) {
-  main #contact ul img {
+  main #contact ul li a img {
     width: 25%;
   }
 }
 @media (min-width: 1024px) {
-  main #contact ul img {
+  main #contact ul li a img {
     width: 20%;
   }
+}
+main #contact ul li a:hover, main #contact ul li a:focus {
+  outline: none;
+}
+main #contact ul li a:hover > img, main #contact ul li a:focus > img {
+  outline: none;
+  border: 3px solid #6f2c99;
+  background-color: rgba(152, 71, 202, 0.25);
+  padding: 2%;
+  transform: scale(1.25);
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  color: #b983db;
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: 3px 2px 3px black;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-shadow: 3px 2px 3px #441b5e;
+}
+
+h3, h4 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: right;
+  color: #a6a6a6;
+}
+
+small {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: #759BCC;
 }
 
 ul {
@@ -728,19 +849,6 @@ ul {
 
 li {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-p {
-  text-align: right;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 @keyframes offset {

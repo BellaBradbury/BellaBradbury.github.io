@@ -5,22 +5,24 @@ $color-primary-dark: lighten($color-primary, 15);
 
 $color-secondary: #759BCC;
 $color-secondary-light: lighten($color-secondary, 20);
+$color-secondary-dark: darken($color-secondary, 40);
+
 $color-tertiary: #9C402B;
+$color-tertiary-light: lighten($color-tertiary, 25);
 
 $color-accent: #6f2c99;
 $color-accent-light: lighten($color-accent, 15);
 $color-accent-dark: darken($color-accent, 15);
 
-$color-focus: red;
-
 $color-lightest: white;
+$color-light: darken($color-lightest, 35);
 $color-darkest: black;
 
 // ---------- BORDERS ---------- //
 $border-thin: 1px solid $color-darkest;
 $border-thick: 2px solid $color-darkest;
 
-$border-focus: 3px solid $color-focus;
+$border-focus: 3px solid $color-accent;
 
 // ---------- LAYOUT ---------- //
 $pad-sect: 5% 10%;
