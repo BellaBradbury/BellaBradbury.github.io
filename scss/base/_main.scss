@@ -16,6 +16,14 @@ main {
     }
 
     #about {
+        ul {
+            @include flex($d:center);
+
+            @include mq(md) {
+                justify-content: right;
+            }
+        }
+
         p {
             @include mq(md) {
                 text-align: left;
@@ -24,6 +32,10 @@ main {
             &:last-of-type {
                 @include mq(md) {
                     text-align: right;
+                }
+
+                @include mq(lg) {
+                    text-align: left;
                 }
             }
         }
@@ -36,6 +48,10 @@ main {
             border: $border-thin;
             margin: 5% 0;
             box-shadow: 0 5px 10px rgba($color-darkest, .25);
+
+            @include mq(lg) {
+                width: 30%;
+            }
         }
         &-jobs {
             @include mq(lg) {
@@ -84,6 +100,16 @@ main {
                         }
                     }
                 }
+            }
+        }
+        &-bio {
+            @include mq(lg) {
+                margin-left: 5%;
+            }
+        }
+        &-personal {
+            @include mq(lg) {
+                @include flex($d:row);
             }
         }
         &-tech {
