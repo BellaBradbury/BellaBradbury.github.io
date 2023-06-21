@@ -915,17 +915,17 @@ li {
   animation: offset 3s linear forwards;
 }
 .logo-draw-2 {
-  animation: offset 3s 1.5s linear forwards;
+  animation: offset 1.75s 0.5s linear forwards;
 }
 .logo-draw-3 {
-  animation: offset 3s 3s linear forwards;
+  animation: offset 1.25s 1.5s linear forwards;
 }
 
 .letter-b-out {
   opacity: 0;
   stroke: #441b5e;
   fill: #441b5e;
-  animation: display 1.5s 4.5s linear forwards;
+  animation: display 1.5s 2.75s linear forwards;
 }
 
 .svg-icn {

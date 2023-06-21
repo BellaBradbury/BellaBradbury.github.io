@@ -22,10 +22,10 @@
         animation: offset 3s linear forwards;
     }
     &-2 {
-        animation: offset 3s 1.5s linear forwards;
+        animation: offset 1.75s 0.5s linear forwards;
     }
     &-3 {
-        animation: offset 3s 3s linear forwards;
+        animation: offset 1.25s 1.5s linear forwards;
     }
 }
 .letter-b-out {
@@ -33,7 +33,7 @@
     stroke: $color-accent-dark;
     fill: $color-accent-dark;
 
-    animation: display 1.5s 4.5s linear forwards;
+    animation: display 1.5s 2.75s linear forwards;
 }
 
 // ---------- ICONS ---------- //
