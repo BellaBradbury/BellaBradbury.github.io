@@ -725,7 +725,6 @@ main .folios-card h3 {
 }
 main .folios-card:focus, main .folios-card:hover {
   outline: none;
-  border: 3px solid #6f2c99;
   transform: scale(1.25);
 }
 main .folios-card:focus > h3, main .folios-card:hover > h3 {

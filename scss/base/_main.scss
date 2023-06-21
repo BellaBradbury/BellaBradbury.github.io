@@ -212,7 +212,6 @@ main {
 
             &:focus, &:hover {
                 outline: none;
-                border: $border-focus;
                 transform: scale(1.25);
             }
             &:focus > h3, &:hover > h3 {
