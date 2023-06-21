@@ -28,3 +28,13 @@
     transform: scale(1.5);
     border-radius: 25px 0 25px 0;
 }
+
+// ---------- ANIMATIONS ---------- //
+@keyframes spin {
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}

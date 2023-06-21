@@ -4,9 +4,6 @@ let techItmArr = Array.from(techCot.children);
 
 techItmArr.forEach(itm => {
     itm.addEventListener('mouseover', (e)=> {
-        itm.style.transform = "rotate(360deg) scale(1.5)";
+        itm.style.animation = "spin 1.5s linear forwards";
     });
-    itm.addEventListener('mouseout', (e)=> {
-        itm.style.transform = "scale(1)";
-    })
 });
