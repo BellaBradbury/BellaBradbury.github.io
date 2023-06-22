@@ -880,6 +880,7 @@ main #contact ul li a:hover > img, main #contact ul li a:focus > img {
 h1, h2 {
   text-transform: uppercase;
   color: #b983db;
+  font-family: "Roboto Mono", monospace;
 }
 
 h1 {
@@ -895,6 +896,7 @@ h2 {
 h3, h4 {
   font-size: 1.25rem;
   text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
 }
 
 p {

@@ -18,6 +18,9 @@ $color-lightest: white;
 $color-light: darken($color-lightest, 35);
 $color-darkest: black;
 
+// ---------- FONTS ---------- //
+$font-head: 'Roboto Mono', monospace;
+
 // ---------- BORDERS ---------- //
 $border-thin: 1px solid $color-darkest;
 $border-thick: 2px solid $color-darkest;
