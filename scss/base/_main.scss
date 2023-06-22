@@ -17,7 +17,7 @@ main {
 
     #about {
         ul {
-            @include flex($d:center);
+            @include flex();
 
             @include mq(md) {
                 justify-content: right;
