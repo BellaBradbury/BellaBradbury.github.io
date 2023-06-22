@@ -11,12 +11,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/Interactive-Registration-Form",
         "image_urls": {
             "thumbnail": {
-                "src": "../img/thumbnail/registration-form.png",
-                "alt": "thumbnail alt text"
+                "src": "../img/thumbnail/registration-form.png"
             },
             "modal": {
                 "src": "../img/modal/registration-form.png",
-                "alt": "modal alt text"
+                "alt": "Form fields."
             }
         },
     },
@@ -28,12 +27,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/OOP-Word-Guessing-Game",
         "image_urls": {
             "thumbnail": {
-                "src": "../img/thumbnail/phrase-hunter.png",
-                "alt": "thumbnail alt text"
+                "src": "../img/thumbnail/phrase-hunter.png"
             },
             "modal": {
                 "src": "../img/modal/phrase-hunter.png",
-                "alt": "modal alt text"
+                "alt": "A game board with hidden letters and an onscreen keyboard for guessing."
             }
         },
     },
@@ -45,12 +43,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/web-app-dashboard",
         "image_urls": {
             "thumbnail": {
-                "src": "../img/thumbnail/dashboard.png",
-                "alt": "thumbnail alt text"
+                "src": "../img/thumbnail/dashboard.png"
             },
             "modal": {
                 "src": "../img/modal/dashboard.png",
-                "alt": "modal alt text"
+                "alt": "User page with multiple widgets including navigation section, alerts, and graphs."
             }
         },
     },
@@ -62,12 +59,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/Random-Quote-Generator",
         "image_urls": {
             "thumbnail": {
-                "src": "../img/thumbnail/quote-generator.png",
-                "alt": "thumbnail alt text"
+                "src": "../img/thumbnail/quote-generator.png"
             },
             "modal": {
                 "src": "../img/modal/quote-generator.png",
-                "alt": "modal alt text"
+                "alt": "Simple page with a quote and button to show another quote. Showcased quote: 'It is better to change an opinion than to persist in a wrong one.'."
             }
         },
     },
@@ -79,12 +75,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/Student-Database",
         "image_urls": {
             "thumbnail": {
-                "src": "../img/thumbnail/student-database.png",
-                "alt": "thumbnail alt text"
+                "src": "../img/thumbnail/student-database.png"
             },
             "modal": {
                 "src": "../img/modal/student-database.png",
-                "alt": "modal alt text"
+                "alt": "Column of cards containing student picture, name, email address, and joined date."
             }
         },
     },
@@ -96,12 +91,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/web-style-guide",
         "image_urls": {
             "thumbnail": {
-                "src": "../img/thumbnail/style-guide.png",
-                "alt": "thumbnail alt text"
+                "src": "../img/thumbnail/style-guide.png"
             },
             "modal": {
                 "src": "../img/modal/style-guide.png",
-                "alt": "modal alt text"
+                "alt": "Mock landing page showcasing different fonts, colors, and layouts."
             }
         },
     },
@@ -113,12 +107,11 @@ const projects = [
         "github_link": "https://github.com/BellaBradbury/interactive-photo-gallery",
         "image_urls": {
             "thumbnail": {
-                "src": "../img/thumbnail/photo-gallery.png",
-                "alt": "thumbnail alt text"
+                "src": "../img/thumbnail/photo-gallery.png"
             },
             "modal": {
                 "src": "../img/modal/photo-gallery.png",
-                "alt": "modal alt text"
+                "alt": "Grid of square photos."
             }
         },
     },
@@ -128,10 +121,11 @@ const projects = [
 projects.forEach(project => {
     const btn = document.createElement('button');
     const cardData = `
-        <img src="${project.image_urls.thumbnail.src}" class="img-thumbnail" alt="${project.image_urls.thumbnail.alt}">
+        <img src="${project.image_urls.thumbnail.src}" class="img-thumbnail" alt="">
         <h3>${project.project_name}</h3>
     `;
     btn.innerHTML = cardData;
+    btn.title = `View details of ${project.project_name} project.`
     btn.classList.add('folios-card');
 
     foliosCot.appendChild(btn);
@@ -174,14 +168,15 @@ function createModal(card, itm, type) {
         <img src="${itm.image_urls.modal.src}" class="img-modal" alt="${itm.image_urls.modal.alt}">
         <h4>${itm.project_name}</h4>
         <div class="folios-links">
-            <a href="${itm.live_link}" target="_blank">LIVE</a>
-            <a href="${itm.github_link}" target="_blank">REPO</a>
+            <a href="${itm.live_link}" target="_blank" title="Visit ${itm.project_name}'s live site.">LIVE</a>
+            <a href="${itm.github_link}" target="_blank" title="Visit ${itm.project_name}'s GitHub Repository.">REPO</a>
         </div>
         <p>${itm.description}</p>
     `;
     modalCot.innerHTML = modalData;
 
     const techCot = document.createElement('ul');
+    techCot.title = `Skills used in ${itm.project_name}.`
     techCot.id = 'folio-tech';
 
     itm.technologies.forEach(tech => {
@@ -189,16 +184,16 @@ function createModal(card, itm, type) {
         
         if (tech === 'js') {
             techIcon.src = '../svg/javascript.svg';
-            techIcon.alt = 'JS icon';
+            techIcon.alt = 'JavaScript.';
         } else if (tech === 'html') {
             techIcon.src = '../svg/html.svg';
-            techIcon.alt = 'HTML icon';
+            techIcon.alt = 'HTML.';
         } else if (tech === 'css') {
             techIcon.src = '../svg/css.svg';
-            techIcon.alt = 'CSS icon';
+            techIcon.alt = 'CSS.';
         } else if (tech === 'sass') {
             techIcon.src = '../svg/sass.svg';
-            techIcon.alt = 'SASS icon';
+            techIcon.alt = 'SASS.';
         }
 
         techCot.append(techIcon);

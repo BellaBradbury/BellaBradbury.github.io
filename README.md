@@ -27,6 +27,3 @@ Team Treehouse - Front End Web Development Techdegree - Project 9
 
 -OPEN TAGS-
 < design
-
--TO DO-
-* accessibility
