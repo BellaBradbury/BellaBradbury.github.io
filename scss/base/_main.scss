@@ -62,9 +62,17 @@ main {
                 text-align: center;
                 width: 25%;
 
-
                 &:focus, &:hover {
-                    @include focus;
+                    outline: none;
+                }
+
+                &:focus > img, &:hover > img {
+                    outline: none;
+                    border: $border-focus;
+                    background-color: rgba($color-accent-light, .25);
+                    padding: 10%;
+                    transform: scale(2);
+                    border-radius: 50px;
                 }
             }
 
@@ -213,6 +221,14 @@ main {
             &:focus, &:hover {
                 outline: none;
                 transform: scale(1.25);
+
+                @include mq(md) {
+                    transform: scale(1);
+                }
+
+                @include mq(lg) {
+                    transform: scale(1.25);
+                }
             }
             &:focus > h3, &:hover > h3 {
                 outline: none;

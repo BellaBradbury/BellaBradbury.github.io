@@ -389,9 +389,15 @@ body header #nav-top ul li a:hover, body header #nav-top ul li a:focus {
   outline: none;
   border: 3px solid #6f2c99;
   background-color: rgba(152, 71, 202, 0.25);
-  padding: 5%;
-  transform: scale(1.5);
+  padding: 2%;
+  transform: scale(0.75);
   border-radius: 25px 0 25px 0;
+}
+@media (min-width: 768px) {
+  body header #nav-top ul li a:hover, body header #nav-top ul li a:focus {
+    padding: 5%;
+    transform: scale(1.5);
+  }
 }
 body header #nav-top ul img {
   width: 50%;
@@ -451,6 +457,13 @@ body footer #nav-btm-sm {
     display: none;
   }
 }
+body footer #nav-btm-sm:hover, body footer #nav-btm-sm:focus {
+  outline: none;
+  border: 3px solid #6f2c99;
+  background-color: rgba(152, 71, 202, 0.25);
+  transform: scale(1.25);
+  border-radius: 25px 0 25px 0;
+}
 body footer #nav-btm-md {
   display: none;
 }
@@ -470,12 +483,11 @@ body footer #nav-btm-md {
     outline: none;
   }
   body footer #nav-btm-md li a:hover > img, body footer #nav-btm-md li a:focus > img {
-    outline: none;
     border: 3px solid #6f2c99;
     background-color: rgba(152, 71, 202, 0.25);
-    padding: 5%;
-    transform: scale(1.5);
-    border-radius: 25px 0 25px 0;
+    padding: 2%;
+    transform: scale(2);
+    border-radius: 10px 0 10px 0;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -551,11 +563,14 @@ main .about-jobs a {
 }
 main .about-jobs a:focus, main .about-jobs a:hover {
   outline: none;
+}
+main .about-jobs a:focus > img, main .about-jobs a:hover > img {
+  outline: none;
   border: 3px solid #6f2c99;
   background-color: rgba(152, 71, 202, 0.25);
-  padding: 5%;
-  transform: scale(1.5);
-  border-radius: 25px 0 25px 0;
+  padding: 10%;
+  transform: scale(2);
+  border-radius: 50px;
 }
 main .about-jobs img {
   width: 70%;
@@ -726,6 +741,16 @@ main .folios-card h3 {
 main .folios-card:focus, main .folios-card:hover {
   outline: none;
   transform: scale(1.25);
+}
+@media (min-width: 768px) {
+  main .folios-card:focus, main .folios-card:hover {
+    transform: scale(1);
+  }
+}
+@media (min-width: 1024px) {
+  main .folios-card:focus, main .folios-card:hover {
+    transform: scale(1.25);
+  }
 }
 main .folios-card:focus > h3, main .folios-card:hover > h3 {
   outline: none;

@@ -51,7 +51,17 @@ body {
 
                     a {
                         &:hover, &:focus {
-                            @include focus;
+                            outline: none;
+                            border: $border-focus;
+                            background-color: rgba($color-accent-light, .25);
+                            padding: 2%;
+                            transform: scale(0.75);
+                            border-radius: 25px 0 25px 0;
+
+                            @include mq(md) {
+                                padding: 5%;
+                                transform: scale(1.5);
+                            }
                         }
                     }
                 }
@@ -113,6 +123,14 @@ body {
                 @include mq(md) {
                     display: none;
                 }
+
+                &:hover, &:focus {
+                    outline: none;
+                    border: $border-focus;
+                    background-color: rgba($color-accent-light, .25);
+                    transform: scale(1.25);
+                    border-radius: 25px 0 25px 0;
+                }
             }
             &-md {
                 display: none;
@@ -129,7 +147,11 @@ body {
                                 outline: none;
                             }
                             &:hover > img, &:focus > img {
-                                @include focus;
+                                border: $border-focus;
+                                background-color: rgba($color-accent-light, .25);
+                                padding: 2%;
+                                transform: scale(2);
+                                border-radius: 10px 0 10px 0;
                             }
 
 
