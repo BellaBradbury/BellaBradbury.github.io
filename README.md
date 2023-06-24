@@ -1,7 +1,7 @@
 # Capstone Portfolio
 
 Team Treehouse - Front End Web Development Techdegree - Project 9
-* Submitted 06/22/23 ***SUBMITTED***
+* Submitted 06/22/23 ***EXCEEDS EXPECTATIONS***
 
 -SKILLS USED-
 * HTML
